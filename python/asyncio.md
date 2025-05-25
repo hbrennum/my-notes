@@ -24,7 +24,6 @@ awaitable object has completed.
  - The keyword can only be used inside an *async* function, a coroutine, and in front of an awaitable object
  - The object must be awaitable, being especially made for the asyncio library
 
-Example:
 ```python
 async def print_after(delay, msg):
     await asyncio.sleep(delay)
@@ -34,10 +33,9 @@ async def print_after(delay, msg):
 ### asyncio.gather()
  - The gather function can take several coroutines as its input, and run them concurrently
  
- Example:
 ```python
 await asyncio.gather(say_hello(), do_something_else())`
 ```
  
-### More information
+## More information
  - [@moraneus/mastering-pythons-asyncio-a-practical-guide](https://medium.com/@moraneus/mastering-pythons-asyncio-a-practical-guide-0a673265cf04)
