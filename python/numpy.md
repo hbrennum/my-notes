@@ -25,14 +25,14 @@ $ [[1 2 3]
 Numpy offers several functions to create arrays quickly
 
 ```python
-# np.array(i): Creates an array from a python list
+# Create an array from a python list
 my_list = [1,2,3,4,5]
 my_array = np.array(my_list)
 print(my_array)
 
 $ [1 2 3 4 5]
 
-# np.zeros(shape): Creates an array filled with zeros.
+# Create an array filled with zeros.
 my_array = np.zeros((5,5))
 print(my_array)
 
@@ -42,19 +42,19 @@ $ [[0. 0. 0. 0. 0.]
    [0. 0. 0. 0. 0.]
    [0. 0. 0. 0. 0.]]
 
-# np.ones(shape): Creates an array filled with ones.
+# Create an array filled with ones.
 my_array = np.ones(10)
 print(my_array)
 
 $ [1. 1. 1. 1. 1. 1. 1. 1. 1. 1.]
 
-# np.arange(start, stop, step): Creates an array with a range of values.
+# Create an array with a range of values.
 my_array = np.arange(0,10,1)
 print(my_array)
 
 $ [0 1 2 3 4 5 6 7 8 9]
 
-# np.linspace(start, stop, num): Creates an array with evenly spaced numbers over a specified interval.
+# Create an array with evenly spaced numbers over a specified interval.
 my_array = np.linspace(1,10,6)
 print(my_array)
 
@@ -62,7 +62,32 @@ $ [ 1.   2.8  4.6  6.4  8.2 10. ]
 
 ```
 
+## Mathmatical operations with numpy arrays
 
-## Core concepts
-- 
+```python
+my_array_1 = np.array([1, 2, 3, 4])
+my_array_2 = np.array([5, 6, 7, 8])
 
+# Element Wise Addition of two vectors
+print(my_array_1 + my_array_2)
+
+$ [ 6  8 10 12]
+
+# Element Wise Multiplication of two vectors
+print(my_array_1 * my_array_2)
+
+$ [ 5 12 21 32]
+
+# Scalar Multiplication of two vectors (dot product)
+# Result = 1*5 + 2*6 + 3*7 + 4*8 = 5 + 12 + 21 + 32 = 70
+dot_product = np.dot(my_array_1, my_array_2)
+print(dot_product)
+
+$ 70
+
+# Element wise square root of a vector
+sqr = np.sqrt(my_array_1)
+print(sqr)
+
+$ [1.         1.41421356 1.73205081 2.        ]
+```
