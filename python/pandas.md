@@ -6,7 +6,7 @@ It excels at working with structured data, and its two primary data structures a
 A Series is a one-dimensional array-like object that can hold any data type.
 
 ```python
-import numpy as np
+import pandas as pd
 
 # Create a Series from a list
 series = pd.Series([10, 20, 30, 40])
